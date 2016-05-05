@@ -1,0 +1,81 @@
+// LAYOUT RESET STYLES
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, a, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video
+    border: 0
+    font-size: 75%
+    list-style: none outside none
+    margin: 0
+    outline: 0
+    padding: 0
+    vertical-align: baseline
+    @media screen and (max-width: $small)
+        font-size: 60%
+
+*, *:before, *:after
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+.clearfix
+    &:after
+        clear: both
+        content: ""
+        display: table
+
+// PAGE ELEMENTS & COMMON CLASSES
+
+html, body
+    margin: 0
+    padding: 0
+
+body
+    background: $bg
+    position: relative
+    overflow: hidden
+    width: 100%
+
+.header
+    left: 0
+    position: fixed
+    top: 0
+    width: 100vw
+    z-index: 500
+
+.content
+    height: auto
+    min-height: calc(100vh - 130px)
+    margin-top: 130px
+    position: relative
+    overflow-y: scroll
+    display: block
+    width: 100vw
+    z-index: 100
+
+.tooltip
+    margin-top: -15px
+    z-index: 2000
+    .tooltip-content
+        background: white !important
+        border: 1px solid $border !important
+        padding: 10px 15px !important
+        line-height: 1rem !important
+        &::before
+            border-bottom-color: white !important
+        div[role="tooltip"]
+            color: $dark_blue
+            font-size: 1.1rem
+            font-weight: 400
+            line-height: 1.3rem
+            text-transform: uppercase
+
+// GREATER THAN MAX-WIDTH (HUGE DISPLAY)
+
+@media screen and (min-width: $max_width)
+
+// MEDIUM
+
+@media screen and (max-width: $medium)
+
+// SMALL
+
+@media screen and (max-width: $small)

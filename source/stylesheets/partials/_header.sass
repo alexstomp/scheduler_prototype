@@ -1,0 +1,203 @@
+// header
+
+.nav
+    background: url('../img/bg_slice.png') $dark_blue
+    display: block
+    .main-nav, .account-nav
+        display: inline-block
+        .nav-tab
+            +transition('border-bottom-color', 0.25s)
+            border-bottom: 5px solid transparent
+            clear: none
+            float: left
+            height: 60px
+            margin: 0
+            margin-right: 10px
+            padding: 10px
+            position: relative
+            width: auto
+            &:last-child
+                margin-right: 0
+            .tab-icon, .tab-logo
+                +transition(color, 0.1s)
+                color: #96a0b9
+                font-size: 14px
+                float: left
+                line-height: 41px
+                vertical-align: text-top
+                width: 23px
+                &.icon-users, &.icon-user
+                    font-size: 12px
+                    line-height: 41px
+            .tab-logo
+                height: 30px
+                left: 10px
+                position: absolute
+                top: 15px
+                width: auto
+            .tab-name
+                +transition(color, 0.1s)
+                color: #96a0b9
+                float: left
+                font-size: 1.1rem
+                font-weight: 600
+                letter-spacing: 0.05rem
+                line-height: 42px
+                text-transform: uppercase
+            .tab-dropdown
+                background: white
+                border-left: 1px solid #e5e5e5
+                border-right: 1px solid #e5e5e5
+                display: none
+                right: 0
+                position: absolute
+                top: 60px
+                width: 200px
+                z-index: 1500
+                .tab-dropdown-item
+                    display: block
+                    a
+                        border-bottom: 1px solid #e5e5e5
+                        color: #757575
+                        display: block
+                        font-size: 1.2rem
+                        padding: 7px 10px
+                        width: 100%
+                        &:hover
+                            background: #F5F5F5
+            &.logo
+                padding-left: 55px
+                .tab-name
+                    color: #c7cddf
+                    font-weight: bold
+                    font-size: 1.3rem
+                    text-transform: uppercase
+            &:hover
+                border-bottom-color: transparentize($accent, 0.65)
+                cursor: pointer
+                .tab-name, .tab-icon, .tab-logo
+                    color: #c7cddf
+                .tab-dropdown
+                    display: inline-block
+            &.active
+                border-bottom-color: $accent
+                cursor: pointer
+                .tab-name, .tab-icon, .tab-logo
+                    color: white
+    .header-right
+        float: right
+        .actions-nav
+            float: left
+            padding-right: 25pxd
+            height: 60px
+            border-right: 1px solid lighten($dark_blue, 10%)
+            .actions-tab
+                float: left
+                color: #c7cddf
+                line-height: 60px
+                font-size: 1.6rem
+                padding: 0 15px
+                position: relative
+                height: 60px
+                width: 50px
+                text-align: center
+                &:last-child
+                    margin-right: 15px
+                .number
+                    +roundedCorners(3px)
+                    line-height: 1rem
+                    background: transparentize(red, 0.4)
+                    padding: 2px 4px
+                    position: absolute
+                    top: 10px
+                    right: 5px
+                    font-size: 1rem
+                i
+                    +transition(font-size, 0.1s)
+                    line-height: inherit
+                    font-size: inherit
+                    position: absolute
+                    right: 15px
+                &:hover
+                    cursor: pointer
+                    .number, i
+                        color: white
+                        cursor: pointer
+                        .number
+                            background: transparentize(red, 0.3)
+        .account-nav
+            float: left
+            .nav-tab
+                border-right: 0
+                padding: 10px 35px 10px 15px
+                .icon-down
+                    color: #c7cddf
+                    font-size: 1.1rem
+                    line-height: 40px
+                    position: absolute
+                    right: 10px
+                    top: 10px
+                .tab-name
+                    color: #c7cddf
+                &:hover
+                    border-bottom-color: transparent
+                    .icon-down, .tab-name, .icon-user
+                        color: white
+
+.subnav
+    background-color: white
+    border-bottom: 1px solid $border
+    display: block
+    height: 70px
+    width: 100%
+    z-index: 500
+    .subnav-links
+        float: left
+        padding-left: 15px
+        .subnav-link
+            float: left
+            margin-right: 10px
+            &:last-child
+                margin-right: 0
+            a
+                +transition(color, 0.1s)
+                +roundedCorners(3px)
+                color: #767E93
+                font-size: 1.2rem
+                font-weight: 600
+                line-height: 70px
+                padding: 10px 10px
+                text-transform: uppercase
+                i
+                    font-size: 1.7rem
+                    line-height: inherit
+                &:hover
+                    color: #56648b
+                    cursor: pointer
+            &.active a
+                color: white
+                background: $accent
+        &.right
+            float: right
+            padding-right: 15px
+            .subnav-link
+                margin-left: 20px
+                margin-right: 0
+                &.superadmin a
+                    color: #B85C00
+
+
+// MEDIUM
+
+@media screen and (max-width: $medium)
+    .nav
+        .main-nav, .header-right
+            .nav-tab .tab-name
+                display: none
+        .header-right
+            .account-nav .nav-tab
+                padding-right: 20px
+
+// SMALL
+
+@media screen and (max-width: $small)

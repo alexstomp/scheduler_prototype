@@ -1,0 +1,35 @@
+// PANELS
+
+.panel
+    +roundedCorners(3px)
+    border: 1px solid $border
+    background: white
+    display: block
+    margin-bottom: 15px
+    .panel-header
+        border-bottom: 1px solid $grey
+        display: block
+        padding: 10px 15px
+        p
+            color: #364361
+            font-weight: 600
+            font-size: 1.2rem
+    .panel-body
+        padding: 10px 15px
+        background: #fcfcfc
+        p
+            font-size: 1.1rem
+            color: #9fa5b4
+
+
+// GREATER THAN MAX-WIDTH (HUGE DISPLAY)
+
+@media screen and (min-width: $max_width)
+
+// MEDIUM
+
+@media screen and (max-width: $medium)
+
+// SMALL
+
+@media screen and (max-width: $small)

@@ -1,0 +1,82 @@
+// Assignments Styles
+
+#assignments-wrap
+    padding: 10px 0
+    position: relative
+    top: 0
+    height: calc(100vh - 105px)
+    .assignments-table-header
+        border-bottom: 2px solid $grey
+        display: block
+        height: 55px
+        padding: 0 10px
+        .table-header
+            color: lighten($black, 30%)
+            display: inline-block
+            float: left
+            font-size: 1.5rem
+            font-weight: bold
+            line-height: 45px
+            text-transform: uppercase
+        .table-days-nav
+            padding-top: 7px
+            margin-left: 20px
+            display: inline-block
+            height: 55px
+            .nav-day
+                color: #575757
+                float: left
+                font-size: 1.3rem
+                font-weight: 400
+                &:nth-child(2)
+                    padding: 0 7px
+                .icon-left, .icon-right
+                    color: inherit
+                    font-size: 1.5rem
+                    padding-top: 7px
+                    &:hover
+                        cursor: pointer
+                        color: black
+        select
+            float: right
+            margin-top: 2px
+            width: auto
+    .assignments.table
+        display: block
+        margin-bottom: 25px
+        padding-right: 17px
+        margin-right: -17px
+        .assignment-row
+            @extend .clearfix
+            border-bottom: 1px solid $grey
+            padding: 10px 10px
+            display: block
+            &:nth-child(even)
+                background: lighten($grey, 14%)
+            &.editing
+                background: lighten($grey, 10%)
+                span
+                    font-style: italic
+            &:hover
+                background: lighten($grey, 13%)
+                cursor: pointer
+            span, i
+                font-size: 1.3rem
+                &.user-assignment
+                    border-bottom: 1px dashed lighten($grey, 2%)
+                    clear: right
+                    float: right
+                    padding-bottom: 5px
+                    margin-bottom: 5px
+                    width: 70%
+                    &:last-child
+                        border-bottom: 0
+                        padding-bottom: 0
+                        margin-bottom: 0
+                    span
+                        float: left
+                        width: 33%
+                        .icon-car
+                            font-size: 1rem
+                            color: darken($grey, 25%)
+                            margin-right: 10px

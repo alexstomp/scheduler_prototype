@@ -1,0 +1,145 @@
+// GRID STYLES
+
+.grid
+    display: block
+    overflow-y: scroll
+    .grid-period
+        background: white
+        border-bottom: 1px solid $border
+        height: 50px
+        position: fixed
+        width: 100%
+        z-index: 1000
+        .grid-period-nav
+            border-right: 1px solid $border
+            color: $black
+            float: left
+            font-size: 1.4rem
+            font-weight: bold
+            line-height: 50px
+            min-height: calc(100vh - 110px)
+            max-width: 275px
+            padding: 0 10px
+            position: relative
+            text-align: center
+            width: 30%
+            .period-nav-left, .period-nav-right
+                +transition(background, 0.1s)
+                border-right: 1px solid $border
+                padding: 0 5px
+                position: absolute
+                outline: 0 !important
+                left: 0px
+                top: 0px
+                height: 49px
+                i
+                    font-size: 1.6rem
+                    line-height: 50px
+                &:hover
+                    background: transparentize($border, 0.7)
+            .period-nav-right
+                border-left: 1px solid $border
+                border-right: 0
+                left: auto
+                right: 0px
+        .grid-period-days
+            display: block
+            float: right
+            height: 50px
+            min-width: 70%
+            overflow-x: scroll
+            width: calc(100vw - 275px)
+            .cell
+                border-right: 1px solid $border
+                color: darken($border, 40%)
+                float: left
+                font-size: 1.4rem
+                font-weight: bold
+                height: 49px
+                line-height: 49px
+                text-align: center
+                width: 3.57%
+                &.off
+                    background: transparentize($border, 0.7)
+    .grid-groups
+        color: #484D5B
+        overflow-x: hidden
+        position: absolute
+        top: 50px
+        width: 100%
+        .grid-group
+            margin-bottom: 2px
+            display: block
+            width: 100%
+            .grid-group-desc
+                background: white
+                border-right: 1px solid $border
+                float: left
+                max-width: 275px
+                width: 30%
+                .grid-row
+                    border-bottom: 1px solid $border
+                    display: block
+                    font-size: 1.2rem
+                    height: 40px
+                    line-height: 40px
+                    padding: 0 10px
+                    &.totals
+                        border-top: 2px solid $border
+                        background: transparentize(orange, 0.8)
+                        color: darken(orange, 15%)
+                        font-weight: bold
+                        height: 42px
+                    &.grid-row-header
+                        background: lighten($border, 8%)
+                        font-weight: bold
+            .grid-group-schedule
+                float: right
+                min-width: 70%
+                width: calc(100vw - 275px)
+                .grid-row
+                    border-bottom: 1px solid $border
+                    display: block
+                    height: 40px
+                    width: 100%
+                    &.totals
+                        border-top: 2px solid $border
+                        background: transparentize(orange, 0.8)
+                        height: 42px
+                        .cell
+                            color: darken(orange, 15%)
+                            font-weight: bold
+                    &.grid-row-header
+                        background: lighten($border, 8%)
+                        .cell
+                            color: darken($border, 25%)
+                            font-weight: bold
+                    .cell
+                        border-right: 1px solid $border
+                        float: left
+                        font-size: 1.4rem
+                        height: 39px
+                        line-height: 39px
+                        text-align: center
+                        width: 3.57%
+                        &.off
+                            background: transparentize($light_blue, 0.95)
+                        &:hover
+                            background: transparentize($light_blue, 0.9)
+                            cursor: pointer
+                    &.totals .cell:hover
+                        background: transparentize(orange, 0.9)
+
+
+
+// GREATER THAN MAX-WIDTH (HUGE DISPLAY)
+
+@media screen and (min-width: $max_width)
+
+// MEDIUM
+
+@media screen and (max-width: $medium)
+
+// SMALL
+
+@media screen and (max-width: $small)

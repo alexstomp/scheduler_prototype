@@ -1,0 +1,77 @@
+// FONTS
+
+@import url(https://i.icomoon.io/public/8597f7fd9f/scheduler/style.css)
+@import url(https://fonts.googleapis.com/css?Source+Sans+Pro:300,400,600)
+
+// CONTENT RESET STYLES
+
+li, a, p, h1, h2, h3, h4, h5, h6, label, input, th, td, div, span, textarea, strong
+    color: inherit
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif
+    font-size: 2rem
+    font-weight: 400
+    line-height: 2.7rem
+    list-style: none outside none
+    text-decoration: none
+
+[class^="icon-"], [class*=" icon-"], [class^="path"], [class*=" path"]
+    font-style: normal
+    font-size: 2.5rem
+    line-height: 2.5rem
+
+// HEADERS
+
+h1, h2, h3, h4, h5, h6
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif
+    strong
+        font-family: inherit
+        font-size: inherit
+        color: inherit
+        font-weight: bold
+
+h1, h2
+    font-size: 2.5rem
+    font-weight: bold
+    line-height: 3.2rem
+    padding-bottom: 25px
+    text-transform: uppercase
+    word-spacing: 0rem
+
+.accent-text
+    color: $accent
+    font-size: inherit
+    font-weight: inherit
+
+p
+    color: #484D5B
+    font-size: 1.45rem
+    font-weight: 400
+    letter-spacing: .03rem
+    line-height: 2.7rem
+    padding-bottom: 25px
+    &:last-child
+        padding-bottom: 0
+
+em
+    font-size: inherit
+    font-weight: inherit
+    line-height: inherit
+
+a
+    color: $link
+    font-weight: 400
+    &:hover
+        color: darken($link, 10%)
+
+
+// GREATER THAN MAX-WIDTH (HUGE DISPLAY)
+
+@media screen and (min-width: $max_width)
+
+// MEDIUM
+
+@media screen and (max-width: $medium)
+
+// SMALL
+
+@media screen and (max-width: $small)

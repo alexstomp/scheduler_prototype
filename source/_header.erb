@@ -1,0 +1,100 @@
+<div class="header">
+    <div class="nav">
+        <div class="main-nav">
+            <a href="/index.html" class="nav-tab logo <%= current_page.data.route == 'dashboard' ? 'active' : '' %>">
+                <img src="./img/logo.png" class="tab-logo"/>
+                <span class="tab-name">Chicago PD</span>
+            </a>
+            <a href="/calendar.html" class="nav-tab <%= current_page.data.route == 'scheduling' ? 'active' : '' %>">
+                <i class="tab-icon icon-calendar"></i>
+                <span class="tab-name">Schedule</span>
+            </a>
+            <a href="/reports.html" class="nav-tab <%= current_page.data.route == 'reports' ? 'active' : '' %>">
+                <i class="tab-icon icon-reports"></i>
+                <span class="tab-name">reports</span>
+            </a>
+            <a href="/users.html" class="nav-tab <%= current_page.data.route == 'users' ? 'active' : '' %>">
+                <i class="tab-icon icon-users"></i>
+                <span class="tab-name">users</span>
+            </a>
+            <a href="/settings.html" class="nav-tab <%= current_page.data.route == 'settings' ? 'active' : '' %>">
+                <i class="tab-icon icon-settings"></i>
+                <span class="tab-name">settings</span>
+            </a>
+        </div>
+        <div class="header-right">
+            <div class="actions-nav">
+                <a class="actions-tab" data-tooltip="Message Blasts" data-tooltip-position="bottom center"><i class="icon-communication"></i></a>
+                <a class="actions-tab"><i class="icon-bell"></i><span class="number red">2</span></a>
+            </div>
+            <div class="account-nav">
+                <div class="nav-tab">
+                    <i class="tab-icon icon-user"></i>
+                    <span class="tab-name">Alex Stomp</span>
+                    <i class="icon-down"></i>
+                    <ul class="tab-dropdown">
+                        <li class="tab-dropdown-item">
+                            <a href="#">Account Settings</a>
+                        </li>
+                        <li class="tab-dropdown-item">
+                            <a href="#">Logout</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% if current_page.data.route == 'dashboard' %>
+    <div class="subnav">
+        <ul class="subnav-links">
+            <li class="subnav-link <%= 'active' if current_page.data.sub_route == 'dashboard' %>"><a href="/index.html">Dashboard</a></li>
+            <li class="subnav-link <%= 'active' if current_page.data.sub_route == 'daily_shifts' %>"><a href="/daily_shifts.html">Daily Shifts</a></li>
+        </ul>
+    </div>
+    <% end %>
+    <% if current_page.data.route == 'scheduling' %>
+    <div class="subnav">
+        <ul class="subnav-links">
+            <li class="subnav-link <%= 'active' if current_page.data.sub_route == 'calendar' %>"><a href="/calendar.html">Grid</a></li>
+            <li class="subnav-link"><a href="/calendar.html">Calendar</a></li>
+            <li class="subnav-link <%= 'active' if current_page.data.sub_route == 'assign' %>"><a href="/assign.html">Assignments</a></li>
+        </ul>
+        <ul class="subnav-links right">
+            <li class="subnav-link"><a href=""><i class="icon-export"></i></a></li>
+        </ul>
+    </div>
+    <% end %>
+    <% if current_page.data.route == 'reports' %>
+    <div class="subnav">
+        <ul class="subnav-links">
+            <li class="subnav-link <%= 'active' if current_page.data.sub_route == 'hours' %>"><a href="/reports.html">Hours</a></li>
+            <li class="subnav-link <%= 'active' if current_page.data.sub_route == 'shift_changes' %>"><a href="/shift_changes.html">Shift Changes</a></li>
+            <li class="subnav-link <%= 'active' if current_page.data.sub_route == 'wages' %>"><a href="/wages.html">Wages</a></li>
+        </ul>
+        <ul class="subnav-links right">
+            <li class="subnav-link"><a href=""><i class="icon-export"></i></a></li>
+        </ul>
+    </div>
+    <% end %>
+    <% if current_page.data.route == 'users' %>
+    <div class="subnav">
+        <ul class="subnav-links">
+            <li class="subnav-link <%= 'active' if current_page.data.sub_route == 'availability' %>"><a href="/users.html">Availability</a></li>
+            <li class="subnav-link <%= 'active' if current_page.data.sub_route == 'preferred_shifts' %>"><a href="/preferred_shifts.html">Preferred Shifts</a></li>
+        </ul>
+    </div>
+    <% end %>
+    <% if current_page.data.route == 'settings' %>
+    <div class="subnav">
+        <ul class="subnav-links">
+            <li class="subnav-link <%= 'active' if current_page.data.sub_route == 'employees' %>"><a href="/settings.html">Employees</a></li>
+            <li class="subnav-link <%= 'active' if current_page.data.sub_route == 'jobs_shifts' %>"><a href="/jobs_shifts.html">Jobs & Shifts</a></li>
+            <li class="subnav-link <%= 'active' if current_page.data.sub_route == 'scheduling' %>"><a href="/scheduling.html">Scheduling Options</a></li>
+            <li class="subnav-link <%= 'active' if current_page.data.sub_route == 'locations' %>"><a href="/locations.html">Locations</a></li>
+        </ul>
+        <ul class="subnav-links right">
+            <li class="subnav-link superadmin"><a href="/assign.html">superadmin</a></li>
+        </ul>
+    </div>
+    <% end %>
+</div>

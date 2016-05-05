@@ -1,0 +1,8 @@
+---
+layout: "layout"
+route: "assignments"
+---
+
+<div id="grid-wrap" class="content">
+    <%= partial "grid" %>
+</div>

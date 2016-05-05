@@ -1,0 +1,33 @@
+<!DOCTYPE <!doctype html>
+<html lang="en">
+    <head>
+        <meta content="IE=edge" http-equiv="X-UA-Compatible">
+        <meta charset="utf-8">
+        <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+        <title><%= current_page.data.title || "PACE Scheduler" %></title>
+
+        <link rel="icon" href="./img/icon.png" type="image/png">
+        <link rel="shortcut icon" href="./img/icon.png" type="image/png">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/css/select2.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tether-tooltip/1.2.0/css/tooltip-theme-arrows.min.css" />
+
+        <!-- STYLES -->
+        <%= stylesheet_link_tag :main %>
+
+        <!-- JS -->
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.js"></script>
+        <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/tether/1.3.1/js/tether.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether-drop/1.4.2/js/drop.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether-tooltip/1.2.0/js/tooltip.min.js"></script>
+        <%= javascript_include_tag :all %>
+    </head>
+
+    <body class="<%= page_classes %>">
+        <%= partial "header" %>
+        <%= yield %>
+    </body>
+</html>
